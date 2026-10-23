@@ -1,0 +1,14 @@
+Options -Indexes
+
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(config\.local\.php|config\.example\.php)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^(config\.local\.php|config\.example\.php)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
