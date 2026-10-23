@@ -1,0 +1,20 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+api/config.local.php
+api/config.example.php
+render-api/.env
+render-api/.env.*
+!render-api/.env.example
+
+# Node / TypeScript
+node_modules/
+render-api/node_modules/
+render-api/dist/
+*.tsbuildinfo
+
+# Local archives and operating system files
+*.zip
+.DS_Store
+Thumbs.db
